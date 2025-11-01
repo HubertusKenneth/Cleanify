@@ -1,5 +1,5 @@
 import { Droplet, Sparkles, Package, CheckCircle, Leaf } from 'lucide-react';
-import productimg from "../assets/cleanify.png";
+import productimg from "../assets/Cleanify.png";
 
 export default function Product() {
   const ingredients = [
