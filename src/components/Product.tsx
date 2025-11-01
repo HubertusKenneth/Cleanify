@@ -13,7 +13,7 @@ export default function Product() {
     'Safe for various surfaces (phone, door handles, tables, toilet seats)',
     'Compact 18ml pocket sprayer design',
     'Natural peach scent',
-    'Lasts up to 1 month with 45 uses',
+    'Lasts up to 1 month with 250 uses',
     'Easy to carry in bags or pockets',
   ];
 

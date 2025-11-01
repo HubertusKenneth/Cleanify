@@ -2,37 +2,33 @@ import { Users, GraduationCap } from 'lucide-react';
 import Hubertus from "../assets/Hubertus.jpeg";
 import Vyone from "../assets/Vyone.jpeg";
 import Clarissa from "../assets/Clarissa.jpeg";
+import Jonathan from "../assets/Jonathan.jpg";
 
 export default function Team() {
   const team = [
     {
       name: 'Hubertus Kenneth Alfragisa',
       role: 'Chief Executive Officer (CEO)',
-      // id: '2702214514',
       image: Hubertus,
     },
     {
       name: 'Vyone Louis',
       role: 'Chief Operating Officer (COO)',
-      // id: '2702212452',
       image: Vyone,
     },
     {
       name: 'Clarissa Clementia',
       role: 'Chief Marketing Officer (CMO)',
-      // id: '2702218393',
       image: Clarissa,
     },
     {
       name: 'Jonathan Tristan Aditya',
       role: 'Chief Financial Officer (CFO)',
-      // id: '2702255501',
-      image: '/profile-jonathan.png',
+      image: Jonathan,
     },
     {
       name: 'Jason Julius Then',
       role: 'Chief Technology Officer (CTO)',
-      // id: '2702322172',
       image: '/profile-jason.png',
     },
   ];
@@ -56,18 +52,28 @@ export default function Team() {
               key={index}
               className="flex flex-col items-center bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
             >
-              <div className="mb-6">
-                {member.image ? (
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-24 h-24 rounded-full object-cover shadow-md border-4 border-emerald-100"
-                  />
-                ) : (
-                  <div className="w-24 h-24 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center shadow-lg">
-                    <Users className="w-12 h-12 text-white" />
-                  </div>
-                )}
+              <div className="mb-6 relative w-24 h-24">
+                <div className="absolute inset-0 rounded-full border-4 border-emerald-100 overflow-hidden shadow-md">
+                  {member.image ? (
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className={`w-full h-full object-cover transition-transform duration-300
+                        ${
+                          member.name === 'Clarissa Clementia'
+                            ? 'object-[center_10%]'
+                            : member.name === 'Jonathan Tristan Aditya'
+                            ? 'scale-120 object-center'
+                            : 'object-center'
+                        }
+                      `}
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center">
+                      <Users className="w-12 h-12 text-white" />
+                    </div>
+                  )}
+                </div>
               </div>
 
               <h3 className="text-lg font-bold text-gray-900 mb-2 text-center min-h-[56px] flex items-center justify-center">
@@ -77,9 +83,6 @@ export default function Team() {
               <p className="text-emerald-600 font-semibold text-center mb-2 min-h-[48px] flex items-center justify-center">
                 {member.role}
               </p>
-
-              {/* ID */}
-              {/* <p className="text-gray-500 text-sm text-center">{member.id}</p> */}
             </div>
           ))}
         </div>

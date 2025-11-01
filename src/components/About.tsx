@@ -58,7 +58,7 @@ export default function About() {
     const animate = (currentTime: number) => {
       const progress = Math.min((currentTime - startTime) / durationMs, 1);
       setVolume(Math.floor(progress * 18));
-      setUses(Math.floor(progress * 45));
+      setUses(Math.floor(progress * 250));
       setDuration(Math.floor(progress * 30));
       if (progress < 1) requestAnimationFrame(animate);
     };
