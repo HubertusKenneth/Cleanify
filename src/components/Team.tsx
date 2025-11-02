@@ -4,6 +4,7 @@ import Hubertus from "../assets/Hubertus.jpeg";
 import Vyone from "../assets/Vyone.jpeg";
 import Clarissa from "../assets/Clarissa.jpeg";
 import Jonathan from "../assets/Jonathan.jpg";
+import Jason from "../assets/Jason.jpg";
 
 export default function Team() {
   const sectionRef = useRef<HTMLDivElement | null>(null);
@@ -50,7 +51,7 @@ export default function Team() {
     {
       name: 'Jason Julius Then',
       role: 'Chief Technology Officer (CTO)',
-      image: '/profile-jason.png',
+      image: Jason,
     },
   ];
 
@@ -84,7 +85,6 @@ export default function Team() {
                   ? 'opacity-100 scale-100 rotate-0'
                   : 'opacity-0 scale-90 -rotate-3'
               }`}
-              // style={{ transitionDelay: `${200 + index * 100}ms` }}
             >
               <div className="mb-6 relative w-24 h-24">
                 <div className="absolute inset-0 rounded-full border-4 border-emerald-100 overflow-hidden shadow-md">
@@ -98,11 +98,14 @@ export default function Team() {
                             ? 'object-[center_10%]'
                             : member.name === 'Jonathan Tristan Aditya'
                             ? 'object-[center_40%]'
+                            : member.name === 'Hubertus Kenneth Alfragisa'
+                            ? 'object-[center_-60%]'
                             : 'object-center'
                         }
                       `}
                       style={
-                        member.name === 'Jonathan Tristan Aditya'
+                        member.name === 'Jonathan Tristan Aditya' ||
+                        member.name === 'Hubertus Kenneth Alfragisa'
                           ? { transform: 'scale(1.35)' }
                           : {}
                       }
