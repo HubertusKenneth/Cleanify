@@ -1,10 +1,30 @@
 import { Mail, MapPin, Phone, Instagram } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function Contact() {
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
   return (
-    <section id="contact" className="py-20 md:py-32 bg-white">
+    <section id="contact" ref={sectionRef} className="py-20 md:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 -mt-10">
             Get In <span className="text-emerald-600">Touch</span>
           </h2>
@@ -14,13 +34,13 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="bg-gradient-to-r from-emerald-50 via-white to-teal-50 rounded-3xl shadow-md p-10 md:p-14">
+        <div className={`bg-gradient-to-r from-emerald-50 via-white to-teal-50 rounded-3xl shadow-md p-10 md:p-14 transition-all duration-1000 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`} style={{ transitionDelay: '200ms' }}>
           <h3 className="text-2xl font-bold text-gray-900 mb-10 text-center">
             Contact Information
           </h3>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
-            <div className="flex items-start space-x-4">
+            <div className={`flex items-start space-x-4 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-6'}`} style={{ transitionDelay: '400ms' }}>
               <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
                 <MapPin className="w-7 h-7 text-white" />
               </div>
@@ -32,7 +52,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="flex items-start space-x-4">
+            <div className={`flex items-start space-x-4 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-6'}`} style={{ transitionDelay: '500ms' }}>
               <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
                 <Mail className="w-7 h-7 text-white" />
               </div>
@@ -42,7 +62,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="flex items-start space-x-4">
+            <div className={`flex items-start space-x-4 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-6'}`} style={{ transitionDelay: '600ms' }}>
               <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
                 <Instagram className="w-7 h-7 text-white" />
               </div>
@@ -52,7 +72,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="flex items-start space-x-4">
+            <div className={`flex items-start space-x-4 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`} style={{ transitionDelay: '700ms' }}>
               <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
                 <Phone className="w-7 h-7 text-white" />
               </div>

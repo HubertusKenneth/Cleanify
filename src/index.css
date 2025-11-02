@@ -30,6 +30,19 @@
   animation: blob 7s infinite;
 }
 
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
