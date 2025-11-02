@@ -34,14 +34,14 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className={`bg-gradient-to-r from-emerald-50 via-white to-teal-50 rounded-3xl shadow-md p-10 md:p-14 transition-all duration-1000 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`} style={{ transitionDelay: '200ms' }}>
+        <div className={`bg-gradient-to-r from-emerald-50 via-white to-teal-50 rounded-3xl shadow-md p-10 md:p-14 transition-all duration-1000 hover:shadow-lg hover:shadow-emerald-200/50 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`} style={{ transitionDelay: '200ms' }}>
           <h3 className="text-2xl font-bold text-gray-900 mb-10 text-center">
             Contact Information
           </h3>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
-            <div className={`flex items-start space-x-4 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-6'}`} style={{ transitionDelay: '400ms' }}>
-              <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+            <div className={`flex items-start space-x-4 transition-all duration-1000 hover:scale-110 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-6'}`} style={{ transitionDelay: '400ms' }}>
+              <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg transition-transform duration-150 hover:scale-125 hover:shadow-xl">
                 <MapPin className="w-7 h-7 text-white" />
               </div>
               <div>
@@ -52,8 +52,8 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className={`flex items-start space-x-4 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-6'}`} style={{ transitionDelay: '500ms' }}>
-              <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+            <div className={`flex items-start space-x-4 transition-all duration-1000 hover:scale-110 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-6'}`} style={{ transitionDelay: '500ms' }}>
+              <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg transition-transform duration-150 hover:scale-125 hover:shadow-xl">
                 <Mail className="w-7 h-7 text-white" />
               </div>
               <div>
@@ -62,8 +62,8 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className={`flex items-start space-x-4 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-6'}`} style={{ transitionDelay: '600ms' }}>
-              <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+            <div className={`flex items-start space-x-4 transition-all duration-1000 hover:scale-110 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-6'}`} style={{ transitionDelay: '600ms' }}>
+              <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg transition-transform duration-150 hover:scale-125 hover:shadow-xl">
                 <Instagram className="w-7 h-7 text-white" />
               </div>
               <div>
@@ -72,8 +72,8 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className={`flex items-start space-x-4 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`} style={{ transitionDelay: '700ms' }}>
-              <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+            <div className={`flex items-start space-x-4 transition-all duration-1000 hover:scale-110 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`} style={{ transitionDelay: '700ms' }}>
+              <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg transition-transform duration-150 hover:scale-125 hover:shadow-xl">
                 <Phone className="w-7 h-7 text-white" />
               </div>
               <div>

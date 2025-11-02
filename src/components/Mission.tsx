@@ -45,9 +45,9 @@ export default function Mission() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 mb-20">
-          <div className={`group bg-gradient-to-br from-emerald-600 to-teal-600 rounded-3xl p-10 md:p-14 text-white shadow-2xl hover:shadow-emerald-300/40 transition-all duration-1000 transform hover:-translate-y-2 ${isVisible ? 'opacity-100 -rotate-1 translate-x-0' : 'opacity-0 rotate-2 -translate-x-10'}`} style={{ transitionDelay: '200ms' }}>
+          <div className={`group bg-gradient-to-br from-emerald-600 to-teal-600 rounded-3xl p-10 md:p-14 text-white shadow-2xl hover:shadow-emerald-300/40 transition-all duration-1000 transform hover:-translate-y-2 hover:shadow-2xl ${isVisible ? 'opacity-100 -rotate-1 translate-x-0' : 'opacity-0 rotate-2 -translate-x-10'}`} style={{ transitionDelay: '200ms' }}>
             <div className="flex items-center mb-8">
-              <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-150">
                 <Eye className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-3xl font-bold tracking-tight">Our Vision</h3>
@@ -59,9 +59,9 @@ export default function Mission() {
             </p>
           </div>
 
-          <div className={`group bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl p-10 md:p-14 shadow-xl hover:shadow-emerald-200 transition-all duration-1000 transform hover:-translate-y-2 ${isVisible ? 'opacity-100 rotate-1 translate-x-0' : 'opacity-0 -rotate-2 translate-x-10'}`} style={{ transitionDelay: '400ms' }}>
+          <div className={`group bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl p-10 md:p-14 shadow-xl hover:shadow-emerald-200 transition-all duration-1000 transform hover:-translate-y-2 hover:shadow-2xl ${isVisible ? 'opacity-100 rotate-1 translate-x-0' : 'opacity-0 -rotate-2 translate-x-10'}`} style={{ transitionDelay: '400ms' }}>
             <div className="flex items-center mb-8">
-              <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-150">
                 <Target className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-3xl font-bold text-gray-900 tracking-tight">Our Mission</h3>
@@ -96,8 +96,8 @@ export default function Mission() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-10">
-            <div className={`flex flex-col items-center text-center bg-white rounded-2xl shadow-md p-8 hover:shadow-lg transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`} style={{ transitionDelay: '800ms' }}>
-              <img src={SDG3} alt="SDG 3" className="w-28 h-28 mb-4 object-contain" />
+            <div className={`flex flex-col items-center text-center bg-white rounded-2xl shadow-md p-8 hover:shadow-2xl hover:scale-105 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`} style={{ transitionDelay: '800ms' }}>
+              <img src={SDG3} alt="SDG 3" className="w-28 h-28 mb-4 object-contain transition-transform duration-150 hover:scale-110" />
               <h4 className="text-xl font-bold text-emerald-700 mb-2">SDG 3: Good Health and Well-being</h4>
               <p className="text-gray-600 text-base leading-relaxed">
                 Cleanify supports SDG 3 by creating disinfectant products that improve public health, reduce illness risks,
@@ -105,8 +105,8 @@ export default function Mission() {
               </p>
             </div>
 
-            <div className={`flex flex-col items-center text-center bg-white rounded-2xl shadow-md p-8 hover:shadow-lg transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`} style={{ transitionDelay: '1000ms' }}>
-              <img src={SDG11} alt="SDG 11" className="w-28 h-28 mb-4 object-contain" />
+            <div className={`flex flex-col items-center text-center bg-white rounded-2xl shadow-md p-8 hover:shadow-2xl hover:scale-105 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`} style={{ transitionDelay: '1000ms' }}>
+              <img src={SDG11} alt="SDG 11" className="w-28 h-28 mb-4 object-contain transition-transform duration-150 hover:scale-110" />
               <h4 className="text-xl font-bold text-teal-700 mb-2">SDG 11: Sustainable Cities and Communities</h4>
               <p className="text-gray-600 text-base leading-relaxed">
                 Through environmentally friendly formulations and packaging, Cleanify contributes to building sustainable

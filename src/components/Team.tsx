@@ -70,7 +70,7 @@ export default function Team() {
           {team.map((member, index) => (
             <div
               key={index}
-              className={`flex flex-col items-center bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-1000 transform hover:-translate-y-2 ${isVisible ? 'opacity-100 scale-100 rotate-0' : 'opacity-0 scale-90 -rotate-3'}`}
+              className={`flex flex-col items-center bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:scale-110 transition-all duration-1000 transform hover:-translate-y-2 ${isVisible ? 'opacity-100 scale-100 rotate-0' : 'opacity-0 scale-90 -rotate-3'}`}
               style={{ transitionDelay: `${200 + index * 100}ms` }}
             >
               <div className="mb-6 relative w-24 h-24">
@@ -79,7 +79,7 @@ export default function Team() {
                     <img
                       src={member.image}
                       alt={member.name}
-                      className={`w-full h-full object-cover transition-transform duration-300
+                      className={`w-full h-full object-cover transition-transform duration-150 hover:scale-125
                         ${
                           member.name === 'Clarissa Clementia'
                             ? 'object-[center_10%]'
@@ -109,7 +109,7 @@ export default function Team() {
         </div>
 
         <div className="mt-20 relative">
-          <div className={`bg-gradient-to-br from-emerald-600 to-teal-600 rounded-3xl shadow-2xl text-white overflow-hidden transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: '900ms' }}>
+          <div className={`bg-gradient-to-br from-emerald-600 to-teal-600 rounded-3xl shadow-2xl text-white overflow-hidden transition-all duration-1000 hover:shadow-emerald-500/50 hover:shadow-2xl ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: '900ms' }}>
             <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/white-diamond.png')]"></div>
             <div className="relative p-10 md:p-16 text-center">
               <div className="flex justify-center mb-6">
@@ -130,7 +130,7 @@ export default function Team() {
                   href="https://binus.ac.id"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-white text-emerald-700 font-semibold px-6 py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                  className="inline-block bg-white text-emerald-700 font-semibold px-6 py-3 rounded-full shadow-md hover:shadow-lg hover:scale-110 transition-all duration-150"
                 >
                   Learn More About BINUS →
                 </a>

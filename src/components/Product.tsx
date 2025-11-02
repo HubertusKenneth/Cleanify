@@ -78,7 +78,7 @@ export default function Product() {
                   <img
                     src={productimg}
                     alt="Cleanify Product"
-                    className="relative w-48 md:w-56 mx-auto object-contain drop-shadow-2xl hover:scale-110 transition-transform duration-500"
+                    className="relative w-48 md:w-56 mx-auto object-contain drop-shadow-2xl hover:scale-110 transition-transform duration-200"
                   />
 
                   <div className="absolute inset-0 pointer-events-none">
@@ -90,7 +90,7 @@ export default function Product() {
                     <Sparkles className="absolute top-1/3 -right-6 text-emerald-400 w-6 h-6 animate-sparklePulse drop-shadow-md" style={{ animationDelay: '1.5s' }} />
                   </div>
 
-                  <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-32 h-8 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full blur-xl"></div>
+                  <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-32 h-8 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full blur-xl group-hover:shadow-lg transition-shadow duration-200"></div>
                 </div>
               </div>
             </div>

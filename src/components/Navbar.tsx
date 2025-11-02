@@ -32,7 +32,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
           <div className="flex items-center space-x-3 animate-fadeInLeft opacity-0" style={{ animationDelay: '0.1s' }}>
-            <img src={logo} alt="Cleanify Logo" className="w-16 h-16 md:w-12 md:h-12 object-contain" />
+            <img src={logo} alt="Cleanify Logo" className="w-16 h-16 md:w-12 md:h-12 object-contain transition-transform duration-150 hover:scale-110" />
             <span className="text-2xl md:text-3xl font-bold text-emerald-700">Cleanify</span>
           </div>
 
@@ -41,7 +41,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-gray-700 hover:text-emerald-600 font-medium transition-colors duration-200 animate-fadeInDown opacity-0"
+                className="text-gray-700 hover:text-emerald-600 font-medium transition-colors duration-150 animate-fadeInDown opacity-0 hover:scale-110 inline-block"
                 style={{ animationDelay: `${0.2 + index * 0.1}s` }}
               >
                 {link.label}
@@ -51,7 +51,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-gray-700 hover:text-emerald-600 transition-colors animate-fadeInRight opacity-0"
+            className="md:hidden text-gray-700 hover:text-emerald-600 transition-colors animate-fadeInRight opacity-0 hover:scale-125 duration-150"
             style={{ animationDelay: '0.6s' }}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -67,7 +67,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block text-gray-700 hover:text-emerald-600 font-medium py-2 transition-colors animate-fadeInUp opacity-0"
+                className="block text-gray-700 hover:text-emerald-600 font-medium py-2 transition-colors animate-fadeInUp opacity-0 hover:scale-105 duration-150"
                 style={{ animationDelay: `${0.4 + index * 0.1}s` }}
               >
                 {link.label}

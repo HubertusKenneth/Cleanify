@@ -84,11 +84,12 @@ export default function About() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`bg-gradient-to-br from-emerald-50 to-teal-50 p-8 rounded-2xl transform transition-all duration-700 delay-${index * 100}
+              className={`bg-gradient-to-br from-emerald-50 to-teal-50 p-8 rounded-2xl transform transition-all duration-700 hover:scale-110 hover:shadow-2xl
                 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
               `}
+              style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center mb-6 shadow-lg">
+              <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center mb-6 shadow-lg transition-transform duration-150 hover:scale-125 hover:shadow-xl">
                 <feature.icon className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
@@ -98,7 +99,7 @@ export default function About() {
         </div>
 
         <div
-          className={`bg-gradient-to-r from-emerald-600 to-teal-600 rounded-3xl p-8 md:p-12 text-white transition-all duration-1000
+          className={`bg-gradient-to-r from-emerald-600 to-teal-600 rounded-3xl p-8 md:p-12 text-white transition-all duration-1000 hover:shadow-2xl hover:shadow-emerald-500/50
             ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
           `}
         >

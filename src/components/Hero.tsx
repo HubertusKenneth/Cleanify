@@ -20,7 +20,7 @@ export default function Hero() {
               <img
                 src={Logo}
                 alt="Cleanify Logo"
-                className="w-20 h-20 md:w-24 md:h-24 object-contain"
+                className="w-20 h-20 md:w-24 md:h-24 object-contain transition-transform duration-150 hover:scale-125"
                 style={{
                   transform: "translate(-2%, -7%)", 
                 }}
@@ -63,14 +63,14 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a
             href="#product"
-            className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-full hover:shadow-xl transform hover:scale-105 transition-all duration-200 animate-scaleIn opacity-0"
+            className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-full hover:shadow-xl transform hover:scale-105 transition-all duration-150 animate-scaleIn opacity-0"
             style={{ animationDelay: '0.7s' }}
           >
             Discover Our Product
           </a>
           <a
             href="#about"
-            className="w-full sm:w-auto px-8 py-4 border-2 border-emerald-600 text-emerald-600 font-semibold rounded-full hover:bg-emerald-50 transform hover:scale-105 transition-all duration-200 animate-scaleIn opacity-0"
+            className="w-full sm:w-auto px-8 py-4 border-2 border-emerald-600 text-emerald-600 font-semibold rounded-full hover:bg-emerald-50 transform hover:scale-105 transition-all duration-150 animate-scaleIn opacity-0"
             style={{ animationDelay: '0.8s' }}
           >
             Learn More
